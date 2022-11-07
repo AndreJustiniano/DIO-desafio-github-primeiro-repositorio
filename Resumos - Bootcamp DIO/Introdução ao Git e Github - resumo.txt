@@ -1,0 +1,89 @@
+﻿BOOTCAMP Orange Tech + Banco Inter
+Digital Innovation One
+Introdução
+ao Git e GitHub
+___
+Resumo das aulas feito por André justiniano
+  
+
+01- Entendendo o que é Git e Github
+O git foi criado em 2005 por linus torvalds (criador do linux), o git é um sistema de versionamento de código distribuído. Ele vai ajudar a criar e monitorar diferentes versões do nosso código dentro de nossa máquina.
+Atenção! Git e Github não são a mesma coisa.[a]
+02- Navegação via Command line interface e instalação
+O design do git é voltado para o CLI (command line interface) A forma de interagir com o git é por linha de comando. 
+Atenção! A interação com o windows é diferente com o unix (Linux) e APPLE[b]
+O terminal do windows é derivado do shell, e o linux é derivado do bash.
+diferenças: 
+Windows 
+-CD (change directory); -Dir; -MKDIR (make directory); -DEL/RMDIR
+UNIX
+-CD; -ls; -MKDIR; -RM-RF
+“Flags” - Complemento que passa para esses comandos, onde eles acrescentam, modificam ou formatar a forma como esses comandos são devolvidos para a gente[c]
+Os comandos básicos  no terminal windows
+DIR > Poder listar. Situar dentro de um sistema operacional e entender em qual local se encontra.
+CD > Possibilita navegar entre as pastas, e é igual para todos os S.O ex: CD/> caminho específico do windows > “CD/windows”. Também serve para voltar a pastar anterior ao adicionar dois pontos. ex: CD..
+CLS > Clear screen “Limpar a tela”
+MKDIR > Criar pasta. ex: mkdir workspace > nome da pasta.
+Atenção! A tecla TAB tem a função de autocontemplar.[d]
+Na Prática
+Criando arquivo pelo Terminal “echo” > print de volta no terminal o texto ou a frase; e esse símbolo “>” é um redirecionador de fluxo. Ex: echo hello > hello.txt > nome do arquivo. 
+Deletando um arquivo no terminal “del” Deletar. ex: del workspace > S/N > S
+Atenção! “setinha pra cima” navegar no histórico de comandos.
+Deletando uma pasta/repositório > retorne ao comando utilizado para criar o arquivo.txt > dir > cd..(saí) > cls (limpar tela) > dir. Comando para realmente remover RMDIR “Remove directory” ex: rmdir workspace / s / q + enter 
+03- Entendendo como o git funciona por baixo dos panos 
+A sigla SHA1 significa “secure hash algorithm” (algoritmo de hash seguro), é um conjunto de funções hash criptográficas projetadas pela NSA (agência de segurança nacional dos EUA). A encriptação gera conjunto de caracteres identificador de 40 dígitos. O SHA1 é uma forma curta de representar um arquivo.[e]
+1 Echo “ola mundo” ! openssl sha1 
+2 > (stdin) = … 40 caracteres 
+Atenção! Como abrir o git bash direto para a pasta desktop? 1. Botão direito 2. clique em git bash here[f]
+Os 3 tipos básicos de objetos do git, responsável pelo versionamento do nosso código. 
+Blob > Contém metadados do git, que são o tipo do objeto, o tamanho da string, o tamanho do arquivo. 
+Tree > Responsável por montar toda a estrutura e onde estão localizados os arquivos.
+Commit > É objeto que vai juntar todo e fará dar sentido.
+O git é um sistema distribuído e seguro[g]
+Chave SSH “ Forma de estabelecer uma conexão segura e encriptada entre duas máquinas” - É necessário criar uma chave ssh no CLI do windows. (Git bash)
+Comandos para criar a chave ssh 
+ssh-keygen -t ed25519 -c asantos.as201@gmail.com (email.com)
+Passos para visualizar as chaves > cd/c/users/ex:andré/.ssh/ > ls (encontrarás as duas chaves: privada e pública) > cat (visualizar o conteúdo de uma das chaves) e isso será utilizado no github 
+Inicializar o ssh-agent que é uma entidade que vai ficar encarregada de pegar as chaves para lidar com elas. Na pasta /.ssh, digite: eval $ (ssh-agent -s) > agent pid 1382 > número do processo; entregue as chaves, digite: ls. logo após, passe a chave privada para o agente. digite: ssh -add id… 
+O Token de acesso pessoal é outra forma de assegurar o github
+04- Iniciando o git e criando um commit 
+Git init > iniciar o repositório do git; Git add > mover arquivos e começar o versionamento; Git commit > fazer um commit.          Todo comando git leva a palavra git na frente. 
+Primeiros comandos no git > ls (listar): cd workspace/>”entrar na pasta”
+Como criar uma pasta dentro de outra no terminal: mkdir livrosreceitas + enter > ls livro-receitas/>pasta criada
+Como iniciar o git dentro da pasta: git init + enter; entrar na pasta oculta (-a) > cd .git/ > “ls” 
+Atenção! Antes de criar um arquivo faça uma configuração inicial. [h]
+Comando para configuração inicial
+-git config - - global user. email “asantos.as201@gmail.com” + enter.
+-git config - - global user. name “André”
+Criando um arquivo na pasta        
+O editor mais utilizado é o typora para arquivos “.md”          O arquivo markdown é a forma mais humana de se escrever um arquivo HTML. Ex: “livro-receitas.md”
+Criando o commit inicial do projeto (Após criação do arquivo .md)
+git add * + enter ; git commit -m “commit inicial” 
+05- Ciclo de vida dos arquivos no git 
+Comando Git status > ajuda a monitorar os status dos arquivos. Ele dirá se o arquivo está: “Untracked”, “Modified” ou “Staged”!  É um comando usado com frequência. 
+Comando para mover “mv”> ex: mv strogonoff.md ./receitas/ + enter
+06- Introdução ao Github
+Como mostrar toda a lista de configuração do git no (Git bash here) > git config –lista
+Como reescrever essas configurações user.email  e user.name no (Git bash here) > git config –globlal –unset user.email(Propriedade a ser modificada)
+Mover a versão do nosso repositório local para um repositório remoto Github > git remote add origin + link no github 
+Continuando > git push origin master 
+Listando repositórios remotos cadastrado > git remote -v
+Verificando se não há nenhuma pendência no repositório > git status
+07- Resolvendo Conflitos
+Clonando repositórios do github direto para a máquina  > git clone + link do repositório
+[a]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-24 13:03 PM.
+[b]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-24 13:08 PM.
+[c]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-24 13:17 PM.
+[d]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-24 13:28 PM.
+[e]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-27 05:50 AM.
+[f]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-27 05:56 AM.
+[g]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-27 06:10 AM.
+[h]Uma reação no total.
+ANDRE JUSTINIANO reagiu com ⚠️: 2022-10-27 06:50 AM.
